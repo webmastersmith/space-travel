@@ -1,5 +1,6 @@
 import { memo } from 'react'
 import globals from 'styles/global.module.scss'
+import HeaderExample from 'components/design-typography/headerExample'
 
 export default memo(function Typography(props) {
   return (
@@ -8,7 +9,9 @@ export default memo(function Typography(props) {
         <span className={`${globals.designH2}`}>02</span>
         typography
       </h2>
-      <div>Typography</div>
+      <div>
+        <HeaderExample />
+      </div>
     </section>
   )
 })
