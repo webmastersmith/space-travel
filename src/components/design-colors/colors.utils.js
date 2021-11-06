@@ -1,15 +1,15 @@
 import styles from './colors.module.scss'
 
-export function createBox(hex, rgb, hsl, bg, text) {
+export function createBox(hex, rgb, hsl, bg, text, span) {
   return (
-    <div className={`${styles.boxWrapper}`}>
+    <div className={`${styles.wrapper}`}>
       <div className={`${bg} ${text} ${styles.box}`}>{hex}</div>
       <p>
-        <span className={`${styles.colorCode}`}>RGB</span>
+        <span className={`${span} ${styles.colorCode}`}>RGB</span>
         {rgb}
       </p>
       <p>
-        <span className={`text-accent ${styles.colorCode}`}>HSL</span>
+        <span className={`${span} ${styles.colorCode}`}>HSL</span>
         {hsl}
       </p>
     </div>

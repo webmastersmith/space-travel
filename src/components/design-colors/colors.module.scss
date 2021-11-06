@@ -1,12 +1,10 @@
-.boxWrapper {
+.wrapper {
     flex-grow: 1;
   }
-  
   .box {
     padding: 3rem 1rem 1rem;
     border: 1px solid #{'hsl(var(--clr-light))'};
   }
-  
   .colorCode {
-   margin-right: 3rem; 
+    margin-right: 2rem; 
   }
