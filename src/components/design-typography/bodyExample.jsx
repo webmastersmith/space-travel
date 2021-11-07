@@ -1,44 +1,64 @@
-import { memo, useState, useEffect, useCallback, useMemo } from 'react'
+import { memo, useMemo } from 'react'
+import globals from 'styles/global.module.scss'
+import styles from 'components/design-typography/typography.module.scss'
+import { createTypographyDiv, uid } from './typography.utils'
 
 export default memo(function BodyExample(props) {
+  const bodyArr = useMemo(
+    () => [
+      {
+        p1Styles: globals.textAccent,
+        p1words: 'Subheading 1 - Bellefair Regular - 28px',
+        p2StylesArr: [globals.fs500, globals.ffSerif, globals.uppercase],
+        p2words: '384,400 km',
+      },
+      {
+        p1Styles: globals.textAccent,
+        p1words:
+          'Subheading 2 - Barlow Condensed Regular - 14px - 2.35 Character Space',
+        p2StylesArr: [
+          globals.fs200,
+          globals.ffSansCond,
+          globals.uppercase,
+          globals.letterSpacing3,
+        ],
+        p2words: ' Avg. Distance',
+      },
+      {
+        p1Styles: globals.textAccent,
+        p1words:
+          'Nav Text - Barlow Condensed Regular - 16px - 2.7 Character Space',
+        p2StylesArr: [
+          globals.fs300,
+          globals.ffSansCond,
+          globals.uppercase,
+          globals.letterSpacing2,
+        ],
+        p2words: 'Europa',
+      },
+      {
+        p1Styles: globals.textAccent,
+        p1words: 'Body Text',
+        p2StylesArr: [],
+        p2words:
+          'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi.',
+      },
+    ],
+    []
+  )
+
   return (
-    <div class="flow" style="flex-basis: 100%; --flow-space: 4rem;">
-      <div>
-        <p class="text-accent">Subheading 1 - Bellefair Regular - 28px</p>
-        <p class="fs-500 ff-serif uppercase">384,400 km</p>
-      </div>
-      <div>
-        <p class="text-accent">
-          Subheading 2 - Barlow Condensed Regular - 14px - 2.35 Character Space
-        </p>
-        <p class="fs-200 uppercase ff-sans-cond letter-spacing-3">
-          Avg. Distance
-        </p>
-      </div>
-      <div>
-        <p class="text-accent">
-          Nav Text - Barlow Condensed Regular - 16px - 2.7 Character Space
-        </p>
-        <p class="fs-300 uppercase ff-sans-cond letter-spacing-2">Europa</p>
-      </div>
-      <div>
-        <p class="text-accent">Body Text</p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus
-          hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet
-          vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin
-          laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor
-          eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.Lorem ipsum
-          dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit.
-          Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel,
-          dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet
-          viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh.
-          Nullam mollis. Ut justo. Suspendisse potenti.Lorem ipsum dolor sit
-          amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque
-          aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis
-          vel, nisi.{' '}
-        </p>
-      </div>
+    <div className={`${styles.wrapper}`}>
+      {bodyArr.map((b) => {
+        const key = uid()
+        return createTypographyDiv(
+          b.p1Styles,
+          b.p1words,
+          b.p2StylesArr,
+          b.p2words,
+          key
+        )
+      })}
     </div>
   )
 })

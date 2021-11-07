@@ -1,5 +1,5 @@
 import { memo } from 'react'
-import { createBox } from './colors.utils'
+import { createBox, uid } from './colors.utils'
 import styles from './colors.module.scss'
 import globals from 'styles/global.module.scss'
 
@@ -32,15 +32,16 @@ export default memo(function Colors() {
   ]
 
   return (
-    <section id="colors" className={`${styles.colors}`}>
-      <h2 className={`${globals.uppercase}`}>
-        <span className={`${globals.designH2}`}>01</span> colors
+    <section id="colors">
+      <h2 className={`${globals.numberedTitle}`}>
+        <span>01</span> colors
       </h2>
 
-      <div className={`${globals.flex} ${globals.flexCenter}`}>
-        {boxColors.map((c) =>
-          createBox(c.hex, c.rgb, c.hsl, c.bg, c.text, c.span)
-        )}
+      <div className={`${styles.colors}`}>
+        {boxColors.map((c) => {
+          const key = uid()
+          return createBox(c.hex, c.rgb, c.hsl, c.bg, c.text, c.span, key)
+        })}
       </div>
     </section>
   )

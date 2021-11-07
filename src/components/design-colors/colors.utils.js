@@ -1,17 +1,20 @@
 import styles from './colors.module.scss'
 
-export function createBox(hex, rgb, hsl, bg, text, span) {
+export function createBox(hex, rgb, hsl, bg, text, span, key) {
   return (
-    <div className={`${styles.wrapper}`}>
+    <div key={key} className={`${styles.boxWrapper}`}>
       <div className={`${bg} ${text} ${styles.box}`}>{hex}</div>
       <p>
-        <span className={`${span} ${styles.colorCode}`}>RGB</span>
+        <span>RGB</span>
         {rgb}
       </p>
       <p>
-        <span className={`${span} ${styles.colorCode}`}>HSL</span>
+        <span>HSL</span>
         {hsl}
       </p>
     </div>
   )
 }
+
+export const uid = () =>
+  new Date().getTime() + Math.random().toString(16).slice(2)
