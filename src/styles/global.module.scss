@@ -22,6 +22,11 @@
   --ff-serif: 'Bellefair', serif;
   --ff-sans-cond: 'Barlow Condensed', sans-serif;
   --ff-sans-normal: 'Barlow', sans-serif;
+
+  // letter-spacing
+  --ls-s: 2.35px;
+  --ls-m: 2.7px;
+  --ls-l: 4.75px;
 }
 
 body {
@@ -64,21 +69,18 @@ body {
 .fs700,
 .fs600 { line-height: 1.1; }
 
-.grid {
-  display: grid;
-  gap: var(--gap, 1rem);
-}
-
-.letterSpacing1 { letter-spacing: 4.75px; } 
-.letterSpacing2 { letter-spacing: 2.7px; } 
-.letterSpacing3 { letter-spacing: 2.35px; } 
-
 .numberedTitle {
   margin-bottom: 1rem;
   text-transform: uppercase;
+  font-family: var(--ff-sans-cond);
+  font-size: var(--fs-500);
+  line-height: calc(var(--fs-500) * 1.5)px;
+  letter-spacing: var(--ls-l);
+  color: #{'hsl(var(--clr-white))'};
   & > span {
-    color: #{'hsl(var(--clr-light))'};
+    color: #{'hsl(var(--clr-light) / .25)'};
     margin-right: 1rem;
+    font-weight: 700;
   }
 }
 
@@ -95,7 +97,6 @@ body {
 }
 
 .textWhite { color: #{'hsl( var(--clr-white) )'}; }
-.textWhite20 { color: #{'hsl( var(--clr-white) / 20% )'}; }
 .textDark { color: #{'hsl( var(--clr-dark) )'}; }
 .textAccent { color: #{'hsl( var(--clr-light) )'}; }
 

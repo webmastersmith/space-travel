@@ -51,7 +51,7 @@ export default memo(function HeadingsExample(props) {
   const createTypographyDivMemo = useCallback(createTypographyDiv, [])
 
   return (
-    <div className={`${styles.childWrapper}`}>
+    <div className={`${styles.headingWrapper}`}>
       {headingsArr.map((t) => {
         const key = uid()
         return createTypographyDivMemo(

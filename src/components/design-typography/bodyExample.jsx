@@ -49,7 +49,7 @@ export default memo(function BodyExample(props) {
   )
 
   return (
-    <div className={`${styles.childWrapper}`}>
+    <div className={`${styles.bodyWrapper}`}>
       {bodyArr.map((b) => {
         const key = uid()
         return createTypographyDiv(
