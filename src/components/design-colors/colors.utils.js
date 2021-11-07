@@ -1,6 +1,6 @@
 import styles from './colors.module.scss'
 
-export function createBox(hex, rgb, hsl, bg, text, span, key) {
+export function createBox(hex, rgb, hsl, bg, text, key) {
   return (
     <div key={key} className={`${styles.boxWrapper}`}>
       <div className={`${bg} ${text} ${styles.box}`}>{hex}</div>
@@ -15,6 +15,3 @@ export function createBox(hex, rgb, hsl, bg, text, span, key) {
     </div>
   )
 }
-
-export const uid = () =>
-  new Date().getTime() + Math.random().toString(16).slice(2)

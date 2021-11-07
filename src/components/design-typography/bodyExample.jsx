@@ -1,7 +1,8 @@
 import { memo, useMemo } from 'react'
+import { createTypographyDiv } from './typography.utils'
+import { uid } from 'utils/global.utils'
 import globals from 'styles/global.module.scss'
 import styles from 'components/design-typography/typography.module.scss'
-import { createTypographyDiv, uid } from './typography.utils'
 
 export default memo(function BodyExample(props) {
   const bodyArr = useMemo(
@@ -48,7 +49,7 @@ export default memo(function BodyExample(props) {
   )
 
   return (
-    <div className={`${styles.wrapper}`}>
+    <div className={`${styles.childWrapper}`}>
       {bodyArr.map((b) => {
         const key = uid()
         return createTypographyDiv(

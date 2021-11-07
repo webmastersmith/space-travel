@@ -1,7 +1,8 @@
 import { memo, useMemo, useCallback } from 'react'
+import { createTypographyDiv } from './typography.utils'
+import { uid } from 'utils/global.utils'
 import globals from 'styles/global.module.scss'
 import styles from 'components/design-typography/typography.module.scss'
-import { createTypographyDiv, uid } from './typography.utils'
 
 export default memo(function HeadingsExample(props) {
   const headingsArr = useMemo(
@@ -48,8 +49,9 @@ export default memo(function HeadingsExample(props) {
   )
 
   const createTypographyDivMemo = useCallback(createTypographyDiv, [])
+
   return (
-    <div className={`${styles.wrapper}`}>
+    <div className={`${styles.childWrapper}`}>
       {headingsArr.map((t) => {
         const key = uid()
         return createTypographyDivMemo(
