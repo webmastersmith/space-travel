@@ -3,7 +3,7 @@ import styles from 'components/interactive-elements/InteractiveElements.module.s
 
 export default memo(function ExploreButton(props) {
   return (
-    <div className={`${styles.interactiveElements}`}>
+    <div className={`${styles.exploreButton}`}>
       <button>
         <span>Explore</span>
       </button>

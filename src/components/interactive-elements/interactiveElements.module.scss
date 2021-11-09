@@ -1,10 +1,17 @@
-.header {
+section.interactiveElements {
+    p {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+}
+.navBarExample {
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: #{'hsl(var(--clr-white) / .1)'};
     padding: 1.5rem 0;
     list-style: none;
+    margin-bottom: 2rem;
     li > button {
         position: relative;
         font-size: var(--fs-400);
@@ -40,13 +47,13 @@
     
 }
 
-.wrapper {
+.childWrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
 }
 
-.interactiveElements {
+.exploreButton {
     outline: 1px solid yellow;
     display: grid;
     place-items: center;
@@ -90,4 +97,72 @@
     p {
         margin-top: 1rem;
     }   
+}
+
+.tabExample {
+    outline: 1px solid yellow;
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        padding: 0 9rem;
+        margin-bottom: 3rem;
+        li {
+            position: relative;
+            height: 1rem;
+            button {
+                color: #{'hsl(var(--clr-white))'};
+                background-color: transparent;
+                border: none;
+            }
+            &:nth-child(-n+2) {
+                button::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -1.5rem;
+                    left: 6px;
+                    width: 2.5rem;
+                    border-bottom: 3px solid #{'hsl(var(--clr-white))'};
+                    cursor: auto; 
+                }
+            }
+            &:nth-child(2) {
+                button::after {
+                    opacity: .4;
+
+                }
+            }
+        }
+    }
+}
+
+.bullets {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 9rem;
+    span::before {
+        display: inline-block;
+        content: '';
+        width: 1rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: #fff;
+        margin-right: 1rem;
+    }
+    span {
+        display: inline-block;
+        width: 1rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+    span::after {
+        display: inline-block;
+        content: '';
+        width: 1rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+
 }

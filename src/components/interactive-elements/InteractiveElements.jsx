@@ -1,22 +1,24 @@
 import { memo } from 'react'
-import Header from './header'
+import NavBarExample from './NavBarExample'
 import ExploreButton from './explore-button'
+import TabExample from './TabExample'
 
 import globals from 'styles/global.module.scss'
 import styles from 'components/interactive-elements/InteractiveElements.module.scss'
 
 export default memo(function InteractiveElements(props) {
   return (
-    <section>
+    <section className={`${styles.interactiveElements}`}>
       <h2 className={`${globals.numberedTitle}`}>
         <span>03</span>
         interactive elements
       </h2>
 
-      <Header />
-      <div className={`${styles.wrapper}`}>
+      <NavBarExample />
+      <p>Different States of Navigation Bar</p>
+      <div className={`${styles.childWrapper}`}>
         <ExploreButton />
-        <div>hello peeps!</div>
+        <TabExample />
       </div>
     </section>
   )
