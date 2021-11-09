@@ -30,12 +30,15 @@ export default memo(function TabExample(props) {
         <div>
           <span>1</span>
         </div>
+
         <div>
           <span>2</span>
         </div>
+
         <div>
           <span>3</span>
         </div>
+
         <p>Slider 2 States (Active, Hover, & Idle)</p>
       </div>
     </div>

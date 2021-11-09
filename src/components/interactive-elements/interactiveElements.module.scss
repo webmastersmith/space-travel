@@ -118,6 +118,7 @@ section.interactiveElements {
             position: relative;
             height: 1rem;
             button {
+                text-transform: uppercase;
                 color: #{'hsl(var(--clr-white))'};
                 background-color: transparent;
                 border: none;
@@ -191,9 +192,19 @@ section.interactiveElements {
        aspect-ratio: 1;
        border-radius: 50%;
        background-color: #{'hsl(var(--clr-white))'};
-
+       
        span {
            color: #{'hsl(var(--clr-dark))'};
-       }
+        }
+    }
+    & > div:not(:first-child) {
+        background-color: transparent;
+        border: 1px solid #{'hsl(var(--clr-white))'};
+        span {
+            color: #{'hsl(var(--clr-white))'};
+        }     
+    }
+    & > div:nth-child(3) {
+       border: 1px solid #{'hsl(var(--clr-white) / .25)'};
    }
 }
