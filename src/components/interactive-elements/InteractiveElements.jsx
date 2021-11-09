@@ -15,7 +15,6 @@ export default memo(function InteractiveElements(props) {
       </h2>
 
       <NavBarExample />
-      <p>Different States of Navigation Bar</p>
       <div className={`${styles.childWrapper}`}>
         <ExploreButton />
         <TabExample />

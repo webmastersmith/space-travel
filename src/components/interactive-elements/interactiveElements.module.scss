@@ -1,50 +1,55 @@
 section.interactiveElements {
-    p {
-        text-align: center;
-        margin-bottom: 4rem;
-    }
+    // p {
+    //     text-align: center;
+    //     margin-bottom: 4rem;
+    // }
 }
 .navBarExample {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #{'hsl(var(--clr-white) / .1)'};
-    padding: 1.5rem 0;
-    list-style: none;
-    margin-bottom: 2rem;
-    li > button {
-        position: relative;
-        font-size: var(--fs-400);
-        text-decoration: none;
-        background-color: transparent;
-        border: none;
-        margin: 0;
-        &:hover {
-            cursor: pointer;
-        }
-    }
-    li {
-        &:nth-child(-n+2) {
-            button::after {
-                content: '';
-                position: absolute;
-                bottom: -1.5rem;
-                left: 2px;
-                width: 7.5rem;
-                border-bottom: 5px solid #{'hsl(var(--clr-white))'};
-                cursor: auto; 
+    ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #{'hsl(var(--clr-white) / .1)'};
+        padding: 1.5rem 0;
+        list-style: none;
+        margin-bottom: 2rem;
+        li > button {
+            position: relative;
+            font-size: var(--fs-400);
+            text-decoration: none;
+            background-color: transparent;
+            border: none;
+            margin: 0;
+            &:hover {
+                cursor: pointer;
             }
         }
+        li {
+            &:nth-child(-n+2) {
+                button::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -1.5rem;
+                    left: 2px;
+                    width: 7.5rem;
+                    border-bottom: 5px solid #{'hsl(var(--clr-white))'};
+                    cursor: auto; 
+                }
+            }
 
-        &:nth-child(2) {
-            button::after {
-                left: 5px;
-                opacity: .25;
-                width: 8rem;
+            &:nth-child(2) {
+                button::after {
+                    left: 5px;
+                    opacity: .25;
+                    width: 8rem;
+                }
             }
         }
     }
-    
+    p {
+        text-align: center;
+        margin-bottom: 5rem;
+    }
 }
 
 .childWrapper {
@@ -101,12 +106,16 @@ section.interactiveElements {
 
 .tabExample {
     outline: 1px solid yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     ul {
         list-style: none;
         display: flex;
         justify-content: space-around;
         padding: 0 9rem;
-        margin-bottom: 3rem;
+        margin: 0 0 3rem 0;
         li {
             position: relative;
             height: 1rem;
@@ -134,35 +143,59 @@ section.interactiveElements {
             }
         }
     }
+    p {
+        text-align: center;
+    }
 }
 
 .bullets {
     display: flex;
     justify-content: space-around;
-    padding: 0 9rem;
-    span::before {
+    margin-bottom: 2rem;
+    div {
+        position: relative;
+        width: 1rem;
+        background-color: #{'hsl(var(--clr-white) / .5)'};
+        border-radius: 50%;
+        height: 1rem;
+    }
+    & > div::before, & > div::after {
+        position: absolute;
         display: inline-block;
         content: '';
         width: 1rem;
         aspect-ratio: 1;
         border-radius: 50%;
-        background-color: #fff;
-        margin-right: 1rem;
     }
-    span {
-        display: inline-block;
-        width: 1rem;
-        aspect-ratio: 1;
-        border-radius: 50%;
-        background-color: #fff;
+    $gap: -2.5rem;
+    & > div::before {
+        top: 0;
+        left: $gap;
+        background-color: #{'hsl(var(--clr-white) / 1)'};
     }
-    span::after {
-        display: inline-block;
-        content: '';
-        width: 1rem;
-        aspect-ratio: 1;
-        border-radius: 50%;
-        background-color: #fff;
+    & > div::after {
+        top: 0;
+        right: $gap;
+        background-color: #{'hsl(var(--clr-white) / .25)'};
     }
+}
 
+.sliders {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; 
+   div {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       width: 3rem;
+       aspect-ratio: 1;
+       border-radius: 50%;
+       background-color: #fff;
+
+       span {
+           color: #000;
+       }
+   }
 }
