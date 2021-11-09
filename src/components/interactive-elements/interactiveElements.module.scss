@@ -59,7 +59,6 @@ section.interactiveElements {
 }
 
 .exploreButton {
-    outline: 1px solid yellow;
     display: grid;
     place-items: center;
     button {
@@ -105,7 +104,6 @@ section.interactiveElements {
 }
 
 .tabExample {
-    outline: 1px solid yellow;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -192,10 +190,10 @@ section.interactiveElements {
        width: 3rem;
        aspect-ratio: 1;
        border-radius: 50%;
-       background-color: #fff;
+       background-color: #{'hsl(var(--clr-white))'};
 
        span {
-           color: #000;
+           color: #{'hsl(var(--clr-dark))'};
        }
    }
 }
