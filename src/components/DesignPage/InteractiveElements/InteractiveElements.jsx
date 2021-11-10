@@ -1,5 +1,5 @@
 import { memo } from 'react'
-import NavBarExample from './NavBarExample'
+import { NavBar } from './NavBarExample'
 import ExploreButton from './explore-button'
 import TabExample from './TabExample'
 
@@ -14,7 +14,9 @@ export const InteractiveElements = memo((props) => {
         interactive elements
       </h2>
 
-      <NavBarExample />
+      <NavBar />
+      <p>Different States of Navigation Bar</p>
+
       <div className={`${styles.childWrapper}`}>
         <ExploreButton />
         <TabExample />

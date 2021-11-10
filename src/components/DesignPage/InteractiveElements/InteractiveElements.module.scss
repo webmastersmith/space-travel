@@ -1,52 +1,37 @@
-section.interactiveElements {}
-
-.navBarExample {
-    ul {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        background-color: #{'hsl(var(--clr-white) / .1)'};
-        padding: 1.5rem 0;
-        list-style: none;
-        margin-bottom: 2rem;
-        li > button {
-            position: relative;
-            font-size: var(--fs-400);
-            text-decoration: none;
-            background-color: transparent;
-            border: none;
-            margin: 0;
-            &:hover {
-                cursor: pointer;
-            }
-        }
-        li {
-            &:nth-child(-n+2) {
-                button::after {
-                    content: '';
-                    position: absolute;
-                    bottom: -1.5rem;
-                    left: 2px;
-                    width: 7.5rem;
-                    border-bottom: 5px solid #{'hsl(var(--clr-white))'};
-                    cursor: auto; 
-                }
-            }
-
-            &:nth-child(2) {
-                button::after {
-                    left: 5px;
-                    opacity: .25;
-                    width: 8rem;
-                }
-            }
-        }
-    }
-    p {
+section.interactiveElements {
+    & > p {
         text-align: center;
         margin-bottom: 5rem;
     }
 }
+
+ul.navBarExample {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #{'hsl(var(--clr-white) / .1)'};
+    list-style: none;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    li > button {
+        position: relative;
+        font-size: var(--fs-400);
+        text-decoration: none;
+        background-color: transparent;
+        border: none;
+        margin: 0;
+        border-bottom: 3px solid #{'hsl(var(--clr-white) / 0)'};
+        padding-bottom: 2rem;
+        &:hover {
+            border-bottom: 3px solid #{'hsl(var(--clr-white) / 0.5)'};
+            cursor: pointer;
+        }
+        &:active {
+            border-bottom: 3px solid #{'hsl(var(--clr-white) / 1)'};
+        }
+    }
+}
+
 
 .childWrapper {
     display: grid;
