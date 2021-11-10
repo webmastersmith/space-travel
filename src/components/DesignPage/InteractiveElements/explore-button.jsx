@@ -1,5 +1,5 @@
 import { memo } from 'react'
-import styles from 'components/interactive-elements/InteractiveElements.module.scss'
+import styles from 'components/DesignPage/InteractiveElements/InteractiveElements.module.scss'
 
 export default memo(function ExploreButton(props) {
   return (

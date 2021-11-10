@@ -1,33 +1,29 @@
 import { memo } from 'react'
-import styles from 'components/interactive-elements/InteractiveElements.module.scss'
+import styles from 'components/DesignPage/InteractiveElements/InteractiveElements.module.scss'
 
 export default memo(function TabExample(props) {
   return (
     <div className={`${styles.tabExample}`}>
-      <div>
-        <ul>
-          <li>
-            <button>Moon</button>
-          </li>
-          <li>
-            <button>Mars</button>
-          </li>
-          <li>
-            <button>europa</button>
-          </li>
-        </ul>
+      <div className={`${styles.tabs}`}>
+        <div>
+          <button className={`${styles.active}`}>Moon</button>
+          <button>Mars</button>
+          <button>europa</button>
+        </div>
         <p>Tabs (Active, Hover, & Idle)</p>
       </div>
 
       <div>
         <div className={`${styles.bullets}`}>
-          <div></div>
+          <button className={`${styles.active}`}></button>
+          <button></button>
+          <button></button>
         </div>
         <p>Slider 1 States (Active, Hover, & Idle)</p>
       </div>
 
       <div className={`${styles.sliders}`}>
-        <div>
+        <div className={`${styles.active}`}>
           <span>1</span>
         </div>
 

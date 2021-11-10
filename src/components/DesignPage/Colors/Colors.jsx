@@ -4,7 +4,7 @@ import { uid } from 'utils/global.utils'
 import styles from './colors.module.scss'
 import globals from 'styles/global.module.scss'
 
-export default memo(function Colors() {
+export const Colors = memo(() => {
   const boxColors = [
     {
       hex: '#0B0D17',

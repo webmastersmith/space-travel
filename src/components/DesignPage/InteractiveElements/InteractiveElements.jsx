@@ -4,9 +4,9 @@ import ExploreButton from './explore-button'
 import TabExample from './TabExample'
 
 import globals from 'styles/global.module.scss'
-import styles from 'components/interactive-elements/InteractiveElements.module.scss'
+import styles from 'components/DesignPage/InteractiveElements/InteractiveElements.module.scss'
 
-export default memo(function InteractiveElements(props) {
+export const InteractiveElements = memo((props) => {
   return (
     <section className={`${styles.interactiveElements}`}>
       <h2 className={`${globals.numberedTitle}`}>
