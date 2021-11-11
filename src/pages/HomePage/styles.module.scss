@@ -1,12 +1,7 @@
 .homePage {
-  outline: 1px solid red;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   $spacing: 1.5rem;
   div.text {
-    outline: 1px solid blue;
-    margin-top: 20rem;
-    margin-left: 10rem;
+    // outline: 1px solid blue;
     width: 450px;
     h1 {
       text-transform: uppercase;
@@ -17,9 +12,20 @@
     }
   }
   div.explore {
+    // outline: 1px solid yellow;
     justify-self: end;
     align-self: end;
-    outline: 1px solid yellow;
     margin-right: 10rem;
   }
+}
+.bgi {
+  background-image: url(../../assets/home/background-home-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
 }
