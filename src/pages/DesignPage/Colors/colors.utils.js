@@ -1,4 +1,4 @@
-import styles from './colors.module.scss'
+import styles from './styles.module.scss'
 
 export function createBox(hex, rgb, hsl, bg, text, key) {
   return (

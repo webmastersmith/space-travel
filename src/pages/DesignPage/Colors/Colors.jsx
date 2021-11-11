@@ -1,7 +1,7 @@
 import { memo } from 'react'
 import { createBox } from './colors.utils'
 import { uid } from 'utils/global.utils'
-import styles from './colors.module.scss'
+import styles from './styles.module.scss'
 import globals from 'styles/global.module.scss'
 
 export const Colors = memo(() => {

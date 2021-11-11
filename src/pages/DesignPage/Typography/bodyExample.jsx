@@ -2,7 +2,7 @@ import { memo, useMemo } from 'react'
 import { createTypographyDiv } from './typography.utils'
 import { uid } from 'utils/global.utils'
 import globals from 'styles/global.module.scss'
-import styles from 'components/DesignPage/Typography/typography.module.scss'
+import styles from './styles.module.scss'
 
 export default memo(function BodyExample(props) {
   const bodyArr = useMemo(

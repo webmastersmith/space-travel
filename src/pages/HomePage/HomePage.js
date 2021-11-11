@@ -7,9 +7,7 @@ export const HomePage = memo(() => {
     <div>
       <header className={`${styles.header}`}>
         <div className={`${styles.logo}`}>Logo</div>
-        <NavBar />
-        {/* <nav className={`${styles.nav}`}>
-            00 Home 01 Destination 02 Crew 03 Technology 04 Design</nav> */}
+        <NavBar links={['Home', 'Destination', 'Crew', 'Technology']} />
       </header>
 
       <p>
@@ -21,3 +19,6 @@ export const HomePage = memo(() => {
     </div>
   )
 })
+
+// {/* <nav className={`${styles.nav}`}> */}
+//  00 Home 01 Destination 02 Crew 03 Technology 04 Design</nav>

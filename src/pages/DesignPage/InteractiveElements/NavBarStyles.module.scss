@@ -22,7 +22,8 @@ ul.navBarExample {
         margin: 0;
         border-bottom: 3px solid #{'hsl(var(--clr-white) / 0)'};
         padding-bottom: 2rem;
-        &:hover {
+        &:hover,
+        &:focus {
             border-bottom: 3px solid #{'hsl(var(--clr-white) / 0.5)'};
             cursor: pointer;
         }

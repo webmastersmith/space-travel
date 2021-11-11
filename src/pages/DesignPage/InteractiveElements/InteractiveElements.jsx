@@ -4,7 +4,7 @@ import ExploreButton from './explore-button'
 import TabExample from './TabExample'
 
 import globals from 'styles/global.module.scss'
-import styles from 'components/DesignPage/InteractiveElements/InteractiveElements.module.scss'
+import styles from './styles.module.scss'
 
 export const InteractiveElements = memo((props) => {
   return (

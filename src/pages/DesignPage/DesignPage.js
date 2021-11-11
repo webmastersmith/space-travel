@@ -1,6 +1,6 @@
-import { Colors, Typography, InteractiveElements } from 'components'
+import { Colors, Typography, InteractiveElements } from 'pages'
 import globals from 'styles/global.module.scss'
-import styles from 'components/DesignPage/DesignPage.module.scss'
+import styles from './styles.module.scss'
 
 export function DesignPage() {
   return (

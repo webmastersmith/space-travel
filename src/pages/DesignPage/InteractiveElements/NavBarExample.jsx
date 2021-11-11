@@ -1,5 +1,5 @@
 import { memo } from 'react'
-import styles from 'components/DesignPage/InteractiveElements/InteractiveElements.module.scss'
+import styles from './NavBarStyles.module.scss'
 import globals from 'styles/global.module.scss'
 
 export const NavBar = memo(() => {
