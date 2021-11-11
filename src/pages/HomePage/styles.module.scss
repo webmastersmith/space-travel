@@ -1,1 +1,25 @@
-
+.homePage {
+  outline: 1px solid red;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  $spacing: 1.5rem;
+  div.text {
+    outline: 1px solid blue;
+    margin-top: 20rem;
+    margin-left: 10rem;
+    width: 450px;
+    h1 {
+      text-transform: uppercase;
+      margin-bottom: $spacing;
+    }
+    p {
+      margin-top: $spacing;
+    }
+  }
+  div.explore {
+    justify-self: end;
+    align-self: end;
+    outline: 1px solid yellow;
+    margin-right: 10rem;
+  }
+}
