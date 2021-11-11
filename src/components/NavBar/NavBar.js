@@ -9,12 +9,12 @@ export const NavBar = memo(({ links }) => {
         return (
           <li>
             {link === 'Home' ? (
-              <NavLink end to="/">
+              <NavLink end to="/" className="test">
                 <span>{`0${i}`}</span>
                 {link}
               </NavLink>
             ) : (
-              <NavLink to={link.toLowerCase()}>
+              <NavLink to={link.toLowerCase()} className="test">
                 <span>{`0${i}`}</span>
                 {link}
               </NavLink>
