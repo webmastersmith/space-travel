@@ -1,6 +1,6 @@
 import { memo } from 'react'
 import { NavBar } from './NavBarExample'
-import ExploreButton from './explore-button'
+import { ExploreButton } from 'components'
 import TabExample from './TabExample'
 
 import globals from 'styles/global.module.scss'
@@ -17,8 +17,11 @@ export const InteractiveElements = memo((props) => {
       <NavBar />
       <p>Different States of Navigation Bar</p>
 
-      <div className={`${styles.childWrapper}`}>
-        <ExploreButton />
+      <div className={`${styles.exploreTabsWrapper}`}>
+        <div className={`${styles.exploreButtonDiv}`}>
+          <ExploreButton />
+          <p>Landing Page Main Button - Hover</p>
+        </div>
         <TabExample />
       </div>
     </section>
