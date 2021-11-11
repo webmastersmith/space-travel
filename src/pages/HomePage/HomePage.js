@@ -1,15 +1,9 @@
 import { memo } from 'react'
-import { NavBar } from 'components'
-import styles from './styles.module.scss'
+// import styles from './styles.module.scss'
 
 export const HomePage = memo(() => {
   return (
     <div>
-      <header className={`${styles.header}`}>
-        <div className={`${styles.logo}`}>Logo</div>
-        <NavBar links={['Home', 'Destination', 'Crew', 'Technology']} />
-      </header>
-
       <p>
         So, you want to travel to Space Let’s face it; if you want to go to
         space, you might as well genuinely go to outer space and not hover kind

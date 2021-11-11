@@ -1,0 +1,20 @@
+.header {
+  outline: 1px solid blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 4rem;
+  &#{&} ul {
+  }
+  $size: 3.5rem;
+  .logo {
+    width: $size;
+    height: $size;
+  }
+  .line {
+    border: 1px solid #{'hsl( var(--clr-white) / 0.5)'};
+    transform: translateX(2rem);
+    margin-left: 2rem;
+    flex: 1 1 100%;
+  }
+}

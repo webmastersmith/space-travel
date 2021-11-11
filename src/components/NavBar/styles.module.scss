@@ -1,40 +1,40 @@
 ul.navBarExample {
-    display: flex;
-    justify-content: space-around;
-    gap: 2rem;
-    align-items: center;
-    background-color: #{'hsl(var(--clr-white) / .1)'};
-    list-style: none;
-    padding: 2rem 0;
-    margin: 0;
-    li {
-
-        & > a {
-            text-transform: uppercase;
-            font-family: var(--ff-sans-cond);
-            font-size: var(--fs-500);
-            line-height: calc(var(--fs-500) * 1.5)px;
-            letter-spacing: var(--ls-l);
-            color: #{'hsl(var(--clr-white))'};
-            text-decoration: none;
-            background-color: transparent;
-            border: none;
-            margin: 0;
-            border-bottom: 3px solid #{'hsl(var(--clr-white) / 0)'};
-            padding-bottom: 2rem;
-            &:hover,
-            &:focus {
-                border-bottom: 3px solid #{'hsl(var(--clr-white) / 0.5)'};
-                cursor: pointer;
-            }
-            &.active {
-                border-bottom: 3px solid #{'hsl(var(--clr-white) / 1)'};
-            }
-            & > span {
-              color: #{'hsl(var(--clr-light) / .25)'};
-              margin-right: 1rem;
-              font-weight: 700;
-            }
-        }
-    } 
-}    
+  //   outline: 1px solid yellow;
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  align-items: center;
+  background-color: #{'hsl(var(--clr-white) / .1)'};
+  list-style: none;
+  padding: 2rem 4rem;
+  margin: 0;
+  li {
+    & > a {
+      text-transform: uppercase;
+      font-family: var(--ff-sans-cond);
+      font-size: var(--fs-500);
+      line-height: calc(var(--fs-500) * 1.5) px;
+      letter-spacing: var(--ls-l);
+      color: #{'hsl(var(--clr-white))'};
+      text-decoration: none;
+      background-color: transparent;
+      border: none;
+      margin: 0;
+      border-bottom: 3px solid #{'hsl(var(--clr-white) / 0)'};
+      padding-bottom: 2rem;
+      &:hover,
+      &:focus {
+        border-bottom: 3px solid #{'hsl(var(--clr-white) / 0.5)'};
+        cursor: pointer;
+      }
+      &.active {
+        border-bottom: 3px solid #{'hsl(var(--clr-white) / 1)'};
+      }
+      & > span {
+        color: #{'hsl(var(--clr-light) / .25)'};
+        margin-right: 1rem;
+        font-weight: 700;
+      }
+    }
+  }
+}
