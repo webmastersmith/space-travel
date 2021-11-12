@@ -19,7 +19,10 @@
   }
 }
 .bgi {
-  background-image: url(../../assets/home/background-home-desktop.jpg);
+  @media screen and (min-width: var(--bp-l)) {
+    background-image: url(../../assets/home/background-home-desktop.jpg);
+  }
+
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

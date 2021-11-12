@@ -8,7 +8,6 @@ export const HomePage = memo(() => {
     <>
       <div className={`${styles.bgi}`}></div>
       <div className={`${globals.gridContainer} ${styles.homePage}`}>
-        <div></div>
         <div className={`${styles.text}`}>
           <h1>So, you want to travel to</h1>
           <span className={`${globals.title}`}>Space</span>
@@ -23,7 +22,6 @@ export const HomePage = memo(() => {
         <div className={`${styles.explore}`}>
           <ExploreButton />
         </div>
-        <div></div>
       </div>
     </>
   )
