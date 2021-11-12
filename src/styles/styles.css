@@ -1,0 +1,3 @@
+a.active[href][aria-current] {
+    border-bottom: 3px solid hsl(var(--clr-white) / 1);
+}

@@ -1,6 +1,6 @@
 import { memo, useMemo } from 'react'
 import { createTypographyDiv } from './typography.utils'
-import { uid } from 'utils/global.utils'
+import { uid } from 'utils'
 import globals from 'styles/global.module.scss'
 import styles from './styles.module.scss'
 

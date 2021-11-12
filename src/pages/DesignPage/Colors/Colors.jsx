@@ -1,6 +1,6 @@
 import { memo } from 'react'
 import { createBox } from './colors.utils'
-import { uid } from 'utils/global.utils'
+import { uid } from 'utils'
 import styles from './styles.module.scss'
 import globals from 'styles/global.module.scss'
 
