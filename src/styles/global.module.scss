@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400;700&family=Bellefair&display=swap');
+@import 'styles/_sass.scss';
+
 :root {
   --gap: 1rem;
   --gap2: 2rem;
@@ -41,27 +43,6 @@
   --bp-xl: 1440px;
 }
 
-@mixin sm {
-  @media (min-width: 375px) {
-    @content;
-  }
-}
-@mixin md {
-  @media (min-width: 768px) {
-    @content;
-  }
-}
-@mixin lg {
-  @media (min-width: 1024px) {
-    @content;
-  }
-}
-@mixin xl {
-  @media (min-width: 1440px) {
-    @content;
-  }
-}
-
 body {
   margin: 0;
   font-family: var(--ff-sans-normal);
@@ -87,22 +68,13 @@ h1 {
 .gridContainer {
   outline: 1px solid red;
   display: grid;
-  grid-template-rows: 272px repeat(2, minmax(0, 560px)) 272px;
+  grid-template-rows: 24px repeat(2, minmax(0, 160px)) 24px;
   grid-template-areas:
     '.'
     'text'
     'button'
     '.';
   // minmax(32px, 1fr) repeat(2, minmax(0, 560px)) minmax(32px, 1fr);
-
-  @include lg {
-    grid-template-rows: auto;
-    grid-template-columns: minmax(0px, 1fr) repeat(2, minmax(0, 560px)) minmax(
-        0px,
-        1fr
-      );
-    grid-template-areas: '. text button .';
-  }
   // padding-top: 17rem;
   & > *:first-child {
     // outline: 5px solid green;
@@ -113,6 +85,15 @@ h1 {
     // outline: 5px solid orange;
     // grid-column: 3/4;
     grid-area: button;
+  }
+
+  @include lg {
+    grid-template-rows: auto;
+    grid-template-columns: minmax(0px, 1fr) repeat(2, minmax(0, 560px)) minmax(
+        0px,
+        1fr
+      );
+    grid-template-areas: '. text button .';
   }
 }
 

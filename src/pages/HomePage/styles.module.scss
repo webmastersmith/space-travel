@@ -1,3 +1,5 @@
+@import 'styles/_sass.scss';
+
 .homePage {
   $spacing: 1.5rem;
   div.text {
@@ -19,10 +21,7 @@
   }
 }
 .bgi {
-  @media screen and (min-width: var(--bp-l)) {
-    background-image: url(../../assets/home/background-home-desktop.jpg);
-  }
-
+  background-image: url(../../assets/home/background-home-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -32,4 +31,7 @@
   bottom: 0;
   right: 0;
   z-index: -1;
+  @include lg {
+    background-image: url(../../assets/home/background-home-desktop.jpg);
+  }
 }
